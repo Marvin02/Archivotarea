@@ -13,8 +13,8 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="about.html">Sobre Nosotros</a></li>
-               <a href="services.html">Servicios</a></li>
-               <a href="contact.html">Contacto</a></li>
+                <li><a href="services.html">Servicios</a></li> <!-- se agrego la etiqueta <li> en ul servicios -->
+                <li><a href="contact.html">Contacto</a></li> <!-- se agrego la etiqueta <li> en el ul de Contacto  -->
             </ul>
         </nav>
     </header>
@@ -23,20 +23,20 @@
             <h2>Envíanos un Mensaje</h2>
             <form action="send_message.php" method="post">
                 <label for="name">Nombre</label>
-                <input type="text" id="name" name="name">
-                
+                <input type="text" id="name" name="name" required> <!-- Se agrego el 'required' para que sea un campo obligatorio -->
+
                 <label for="email">Correo Electrónico</label>
-                <input type="text" id="email" name="email">
-                
+                <input type="email" id="email" name="email" required> <!-- se paso de 'type="text"' a 'type="email" ya que es campo correo y se agrego el 'required' -->
+
                 <label for="message">Mensaje</label>
-                <textarea id="text" name="message"></textarea>
-                
+                <textarea id="message" name="message" required></textarea> <!-- Se cambió 'id="text"' a 'id="message"' porque el for de label es message y se agrego el 'required' -->
+
                 <button type="submit">Enviar</button>
-            
+            </form> <!-- Se añadió el </form> para cerrar el formulario -->
         </section>
     </main>
     <footer>
-        <p>&copy 2024 Nombre de la Empresa</p>
+        <p>&copy; 2024 Nombre de la Empresa</p> <!-- Se añadió el punto y coma para el simbolo de copyright -->
     </footer>
 </body>
 </html>
